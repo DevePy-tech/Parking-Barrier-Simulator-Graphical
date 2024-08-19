@@ -82,31 +82,16 @@ screen.pack()
 screen.create_rectangle(4, 4, 200, 150, fill="white", outline="white")
 screen.create_text(25,25, anchor=CENTER, text=strftime('%H:%M:%S %p'))
 time()
-
-# ticket_number = generate_barcode()
-
-# img= ImageTk.PhotoImage(Image.open(ticket_number + ".png"))
-# screen.create_image(4,4, anchor=NW, image=img)
-
-# img = ImageTk.PhotoImage(resize_image(ticket_number + ".png"))
    
 start = Button(root, text="Press for ticket", command=print_ticket,
                font=('calibri', 20, 'bold'))
 start.pack()
 start.config(activebackground="gray", bg="green")
 
-# temp = Button(text='Send', command=send_message)
-# temp.pack()
-
 call = Button(root, text="Call for help", command=call_help,
               font=('calibri', 20, 'bold'))
 call.pack()
 call.config(activebackground="gray", bg="blue")
-
-# ticket = Label(root, text="", bg="yellow",
-#                font=('calibri', 10, 'bold'))
-# ticket.pack()
-# ticket.config(activebackground="white", bg="gray")
 
 # Keep tkinter window open
 root.mainloop()
